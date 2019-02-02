@@ -35,4 +35,5 @@ public class RobotMap {
 	public static final int WITalon = 8;
 	public static final int RITalon = 4;
 	public static final int LITalon = 5;
-	}
+
+}
