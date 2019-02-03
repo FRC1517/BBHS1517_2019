@@ -1,7 +1,7 @@
 package org.usfirst.frc.team1517.robot.subsystems;
 
 import org.usfirst.frc.team1517.robot.RobotMap;
-import org.usfirst.frc.team1517.robot.commands.ElevatorCommand;
+import org.usfirst.frc.team1517.robot.commands.GripperCommand;
 import org.usfirst.frc.team1517.robot.commands.WinchCommand;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;

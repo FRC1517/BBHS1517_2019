@@ -27,13 +27,13 @@ public class RobotMap {
 	// number and the module. For example you with a rangefinder:
 	public static final int xboxController = 0;
 	public static final int xboxController2 = 1;
-	public static final int RFTalon = 7;
-	public static final int RBTalon = 6;
-	public static final int LFTalon = 1;
-	public static final int LBTalon = 2;
-	public static final int ElTalon = 3;
-	public static final int WITalon = 8;
-	public static final int RITalon = 4;
-	public static final int LITalon = 5;
+	public static final int RFTalon = 8;
+	public static final int RBTalon = 7;
+	public static final int LFTalon = 6;
+	public static final int LBTalon = 5;
+	public static final int GRTalon = 4;
+	public static final int WITalon = 3;
+	public static final int RITalon = 2;
+	public static final int LITalon = 1;
 
 }

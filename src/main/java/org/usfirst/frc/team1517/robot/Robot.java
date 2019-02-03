@@ -9,7 +9,7 @@ package org.usfirst.frc.team1517.robot;
 
 import org.usfirst.frc.team1517.robot.commands.DriveForward;
 import org.usfirst.frc.team1517.robot.subsystems.DriveTrainSubsystem;
-import org.usfirst.frc.team1517.robot.subsystems.ElevatorSubsystem;
+import org.usfirst.frc.team1517.robot.subsystems.GripperSubsystem;
 import org.usfirst.frc.team1517.robot.subsystems.WinchSubsystem;
 import org.usfirst.frc.team1517.robot.subsystems.IntakeSubsystem;
 
@@ -32,7 +32,7 @@ public class Robot extends IterativeRobot {
 	private static final String kDefaultAuto = "Default";
 	private static final String kCustomAuto = "My Auto";
 	public static final DriveTrainSubsystem DriveTrainSub = new DriveTrainSubsystem();
-	public static final ElevatorSubsystem ElevatorSub = new ElevatorSubsystem();
+	public static final GripperSubsystem GripperSub = new GripperSubsystem();
 	public static final WinchSubsystem WinchSub = new WinchSubsystem();
 	public static final IntakeSubsystem IntakeSub = new IntakeSubsystem();
 	
@@ -52,6 +52,7 @@ public class Robot extends IterativeRobot {
 
 		oi = new OI();
 		CameraServer.getInstance().startAutomaticCapture();
+		
 		
 		// instantiate the command used for the autonomous period
 //		m_autoChooser = new SendableChooser<Command>();

@@ -8,11 +8,11 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class ElevatorCommand extends Command {
+public class GripperCommand extends Command {
 
-    public ElevatorCommand() {
+    public GripperCommand() {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.ElevatorSub);
+        requires(Robot.GripperSub);
         
     }
 
@@ -22,7 +22,7 @@ public class ElevatorCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-       	Robot.ElevatorSub.elevatorDrive(Robot.oi.getXbox2().getY(GenericHID.Hand.kRight));
+       	Robot.GripperSub.GripperDrive(Robot.oi.getXbox2().getY(GenericHID.Hand.kRight));
         
     }
 
