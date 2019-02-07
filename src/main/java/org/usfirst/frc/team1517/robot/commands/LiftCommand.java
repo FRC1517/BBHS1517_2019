@@ -1,29 +1,22 @@
-/*package org.usfirst.frc.team1517.robot.commands;
+package org.usfirst.frc.team1517.robot.commands;
 
-import org.usfirst.frc.team1517.robot.Robot;
-
-import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.command.Command;
+import org.usfirst.frc.team1517.robot.Robot;
+import edu.wpi.first.wpilibj.GenericHID;
 
-/**
- *
- */
-/*public class WinchCommand extends Command {
-
-    public WinchCommand() {
-        // Use requires() here to declare subsystem dependencies
-        requires(Robot.WinchSub);
-        
+public class LiftCommand extends Command {
+    public LiftCommand () {
+        requires(Robot.LiftSub);
     }
-
-    // Called just before this Command runs the first time
-    protected void initialize() {
+   // Called just before this Command runs the first time
+   protected void initialize() {
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-       	Robot.WinchSub.winchDrive(Robot.oi.getXbox2().getTriggerAxis(GenericHID.Hand.kLeft));
-        
+        Robot.LiftSub.liftDrive(Robot.oi.getXbox3().getY(GenericHID.Hand.kLeft));
+        //Robot.LiftSub.LiftDrive(Robot.oi.getXbox3().getY(GenericHID.Hand.kRight));
+        //Robot.Lift.obey(up, down);
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -40,4 +33,3 @@ import edu.wpi.first.wpilibj.command.Command;
     protected void interrupted() {
     }
 }
-*/

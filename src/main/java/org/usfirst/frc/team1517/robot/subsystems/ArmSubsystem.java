@@ -2,7 +2,7 @@ package org.usfirst.frc.team1517.robot.subsystems;
 
 import org.usfirst.frc.team1517.robot.RobotMap;
 import org.usfirst.frc.team1517.robot.commands.GripperCommand;
-import org.usfirst.frc.team1517.robot.commands.WinchCommand;
+import org.usfirst.frc.team1517.robot.commands.ArmCommand;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
@@ -14,31 +14,31 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 /**
  *
  */
-public class WinchSubsystem extends Subsystem {
+public class ArmSubsystem extends Subsystem {
 
-	SpeedController m_winch; 
+	SpeedController m_arm; 
 	//DifferentialDrive m_robotElevator; 
 
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
-	public WinchSubsystem()
+	public ArmSubsystem()
 	{
-		m_winch = new WPI_TalonSRX(RobotMap.WITalon);
+		m_arm = new WPI_TalonSRX(RobotMap.ARTalon);
 
 	}
 	
-	public void winchDrive(double x)
+	public void armDrive(double x)
 	{
-		System.out.println("winchdrive "+ x  );
+		System.out.println("armdrive "+ x  );
 		
-		m_winch.set(x);
+		m_arm.set(x);
 	}
 
 	
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
-        setDefaultCommand(new WinchCommand());
+        setDefaultCommand(new ArmCommand());
     }
 }
 

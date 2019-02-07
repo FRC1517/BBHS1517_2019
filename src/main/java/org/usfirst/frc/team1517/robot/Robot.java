@@ -8,18 +8,15 @@
 package org.usfirst.frc.team1517.robot;
 
 import org.usfirst.frc.team1517.robot.commands.DriveForward;
-import org.usfirst.frc.team1517.robot.subsystems.DriveTrainSubsystem;
-import org.usfirst.frc.team1517.robot.subsystems.GripperSubsystem;
-import org.usfirst.frc.team1517.robot.subsystems.WinchSubsystem;
-import org.usfirst.frc.team1517.robot.subsystems.IntakeSubsystem;
+import org.usfirst.frc.team1517.robot.subsystems.*;
+//import org.usfirst.frc.team1517.robot.subsystems.IntakeSubsystem;
+//import org.usfirst.frc.team1517.robot.subsystems.Pneumatics;
 
 import edu.wpi.first.wpilibj.CameraServer;
-import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -33,8 +30,11 @@ public class Robot extends IterativeRobot {
 	private static final String kCustomAuto = "My Auto";
 	public static final DriveTrainSubsystem DriveTrainSub = new DriveTrainSubsystem();
 	public static final GripperSubsystem GripperSub = new GripperSubsystem();
-	public static final WinchSubsystem WinchSub = new WinchSubsystem();
-	public static final IntakeSubsystem IntakeSub = new IntakeSubsystem();
+	public static final ArmSubsystem ArmSub = new ArmSubsystem();
+	public static final LiftSubsystem LiftSub = new LiftSubsystem();
+	//public static final IntakeSubsystem IntakeSub = new IntakeSubsystem();
+	//public static final Pneumatics pneumatics = new Pneumatics();
+	//public static Compressor compressor;
 	
 	public static OI oi;
 	

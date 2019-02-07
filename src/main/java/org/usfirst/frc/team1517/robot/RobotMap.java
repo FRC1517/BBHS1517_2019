@@ -27,13 +27,24 @@ public class RobotMap {
 	// number and the module. For example you with a rangefinder:
 	public static final int xboxController = 0;
 	public static final int xboxController2 = 1;
-	public static final int RFTalon = 8;
-	public static final int RBTalon = 7;
-	public static final int LFTalon = 6;
-	public static final int LBTalon = 5;
-	public static final int GRTalon = 4;
-	public static final int WITalon = 3;
+	public static final int xboxController3 = 2;
+	public static final int RFTalon = 8; //right front drive motor
+	public static final int RBTalon = 7; //right back drive motor
+	public static final int LFTalon = 6; //left front drive motor
+	public static final int LBTalon = 5; //left back drive motor
+	public static final int GRTalon = 4; //gripper
+	public static final int ARTalon = 3; //arm
 	public static final int RITalon = 2;
 	public static final int LITalon = 1;
-
+	
+	public static final int PNEU_UP = 0;
+	public static final int PNEU_DOWN = 0;
+	//public static double xAxisScale = 1;
+	//public static double yAxisScale = 1;
+	//public static double twistScale = 1;
+	//public static boolean pMode = false;
+	//public static boolean fMode = false; 
+	//public static boolean islocked;
+	//public static boolean isDown;
+	//public static boolean isGearInRobot;
 }

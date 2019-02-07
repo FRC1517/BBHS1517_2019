@@ -1,4 +1,4 @@
-package org.usfirst.frc.team1517.robot.subsystems;
+/*package org.usfirst.frc.team1517.robot.subsystems;
 
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -13,7 +13,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 /**
  *
  */
-public class IntakeSubsystem extends Subsystem {
+/*public class IntakeSubsystem extends Subsystem {
 
 	WPI_TalonSRX LIMotor, RIMotor; 
 	SpeedControllerGroup m_intake ;
@@ -42,4 +42,4 @@ public class IntakeSubsystem extends Subsystem {
 	    setDefaultCommand(new IntakeCommand());
     }
 }
-
+*/

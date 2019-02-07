@@ -8,11 +8,11 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class IntakeCommand extends Command {
+public class ArmCommand extends Command {
 
-    public IntakeCommand() {
+    public ArmCommand() {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.IntakeSub);
+        requires(Robot.ArmSub);
     }
 
     // Called just before this Command runs the first time
@@ -21,7 +21,7 @@ public class IntakeCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.IntakeSub.intakeDrive(Robot.oi.getXbox2().getY(GenericHID.Hand.kLeft));
+    	Robot.ArmSub.armDrive(Robot.oi.getXbox2().getY(GenericHID.Hand.kLeft));
     }
 
     // Make this return true when this Command no longer needs to run execute()
