@@ -78,7 +78,7 @@ public class Robot extends IterativeRobot {
 		m_autonomousCommand = new DriveForward();
 		System.out.println("Auto selected: ");
 	//	m_autonomousCommand = (Command) m_autoChooser.getSelected();
-		m_autonomousCommand.start();
+		//m_autonomousCommand.start();
 	}
 
 	/**

@@ -30,7 +30,7 @@ public class OI {
 		PneumaticLiftDown.whenReleased(new PneumaticLiftStop(0));
 		PneumaticLiftUp.whenPressed(new PneumaticLiftUp(0));
 		PneumaticLiftUp.whenReleased(new PneumaticLiftStop(0));*/
-    	System.out.println("OI constructer " );
+		System.out.println("OI constructer " ); 
     	
     }
     public XboxController getXbox() {

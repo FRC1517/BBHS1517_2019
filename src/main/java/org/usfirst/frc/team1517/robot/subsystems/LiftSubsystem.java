@@ -12,16 +12,16 @@ public class LiftSubsystem extends Subsystem {
     Solenoid DownValve;
 
     public LiftSubsystem() {
-        Solenoid m_UpValve = new Solenoid(RobotMap.PNEU_UP);
-        Solenoid m_DownValve = new Solenoid(RobotMap.PNEU_DOWN);
+        Solenoid m_UpValve = new Solenoid(RobotMap.PCM, RobotMap.PNEU_UP);
+        Solenoid m_DownValve = new Solenoid(RobotMap.PCM, RobotMap.PNEU_DOWN);
     }
 
     public void LiftDrive(boolean x) {
         System.out.println("liftdrive "+ x  );
         Solenoid m_UpValve;
-        m_UpValve.set(x);
+        UpValve.set(x);
         Solenoid m_DownValve;
-        m_DownValve.set(x);
+        DownValve.set(x);
         }
 
     public void obey(boolean up, boolean down) {
@@ -45,4 +45,4 @@ public class LiftSubsystem extends Subsystem {
 
 	public void liftDrive(double y) {
 	}
-}
+} 

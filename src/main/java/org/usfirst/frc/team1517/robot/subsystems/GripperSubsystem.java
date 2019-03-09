@@ -31,7 +31,7 @@ public class GripperSubsystem extends Subsystem {
 	{
 		System.out.println("gripperdrive "+ x  );
 		
-		m_gripper.set(x);
+		m_gripper.set(x/2);
 	}
 
 	
