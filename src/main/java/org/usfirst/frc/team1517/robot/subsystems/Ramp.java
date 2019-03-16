@@ -1,21 +1,33 @@
-import frc.robot.RobotMap;
-import edu.wpi.first.wpilibj.DoubleSolenoid;
-import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
+package org.usfirst.frc.team1517.robot.subsystems;
+
+import org.usfirst.frc.team1517.robot.RobotMap;
+import org.usfirst.frc.team1517.robot.commands.PistonDown;
+
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-public class Shooter extends Subsystem {
+public class Ramp extends Subsystem {
     
-    DoubleSolenoid pitchSolenoid = null;
+    public Solenoid UpSolenoid = null; //double solenoid doesn't work
+    public Solenoid DownSolenoid = null;
 
     public Ramp() {
-        pitchSolenoid = new DoubleSolenoid(RobotMap.SHOOTER_PITCH_SOLENOID_DEPLOY, RobotMap.SHOOTER_PITCH_SOLENOID_RETRACT);
+        UpSolenoid = new Solenoid(RobotMap.PCM, RobotMap.PNEU_UP);
+        DownSolenoid = new Solenoid(RobotMap.PCM, RobotMap.PNEU_DOWN);
     }
 
     public void Up() {
-        pitchSolenoid.set(Value.kForward);
+        DownSolenoid.set(false);
+        UpSolenoid.set(true);
     }
 
     public void Down() {
-        pitchSolenoid.set(Value.kForward);
+        UpSolenoid.set(false);
+        DownSolenoid.set(true);
+    }
+
+    @Override
+    protected void initDefaultCommand() {
+        setDefaultCommand(new PistonDown());
     }
 }

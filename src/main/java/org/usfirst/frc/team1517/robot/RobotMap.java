@@ -25,8 +25,13 @@ public class RobotMap {
 
 	// If you are using multiple modules, make sure to define both the port
 	// number and the module. For example you with a rangefinder:
+
+	//public static Compressor pneumaticsCompressor;
+    //public static DoubleSolenoid solenoid;
+	//public static DoubleSolenoid shifters;
+	
 	public static final int xboxController = 0;			//Drive Contoller
-	public static final int xboxController2 = 1;		//
+	public static final int xboxController2 = 1;		//Auxillary Controller
 	public static final int xboxController3 = 2;
 	public static final int RFTalon = 8; //right front drive motor //idk
 	public static final int RBTalon = 7; //right back drive motor //idk
@@ -36,9 +41,11 @@ public class RobotMap {
 	public static final int ARTalon = 3; //Gripper
 	public static final int RITalon = 2;	//On Robot R Back
 	public static final int LITalon = 1;	//On Robot R Front
+	public static final int EncoderPortA = 3;
+	public static final int EncoderPortB = 1;	
 
-	public static final int SHOOTER_PITCH_SOLENOID_DEPLOY = 0;
-	public static final int SHOOTER_PITCH_SOLENOID_RETRACT = 1;
+	//public static final int SHOOTER_PITCH_SOLENOID_DEPLOY = 0;
+	//public static final int SHOOTER_PITCH_SOLENOID_RETRACT = 1;
 
 	
 	public static final int PNEU_UP = 0;
@@ -46,4 +53,10 @@ public class RobotMap {
 
 	public static final int PDP = 62;
 	public static final int PCM = 61;
+
+	/*pneumaticsCompressor = new Compressor(3, 1);        
+    solenoid = new DoubleSolenoid(1, 2);
+    shifters = new DoubleSolenoid(3, 4);
+    
+    LiveWindow.addActuator("Pneumatics", "Solenoid", solenoid);*/
 }

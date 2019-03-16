@@ -8,15 +8,24 @@
 package org.usfirst.frc.team1517.robot;
 
 import org.usfirst.frc.team1517.robot.commands.DriveForward;
+import org.usfirst.frc.team1517.robot.commands.PistonDown;
 import org.usfirst.frc.team1517.robot.subsystems.*;
 //import org.usfirst.frc.team1517.robot.subsystems.IntakeSubsystem;
 //import org.usfirst.frc.team1517.robot.subsystems.Pneumatics;
 
 import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+import org.usfirst.frc.team1517.robot.subsystems.*;
+import org.usfirst.frc.team1517.robot.Robot;
+
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -31,7 +40,13 @@ public class Robot extends IterativeRobot {
 	public static final DriveTrainSubsystem DriveTrainSub = new DriveTrainSubsystem();
 	public static final GripperSubsystem GripperSub = new GripperSubsystem();
 	public static final ArmSubsystem ArmSub = new ArmSubsystem();
-	public static final LiftSubsystem LiftSub = new LiftSubsystem();
+	//public static final LiftSubsystem LiftSub = new LiftSubsystem();
+	public static final Ramp m_ramp = new Ramp();
+	private static final int kEncoderPortA = 3;
+	private static final int kEncoderPortB = 0;
+
+	private Encoder m_encoder;
+
 	//public static final IntakeSubsystem IntakeSub = new IntakeSubsystem();
 	//public static final Pneumatics pneumatics = new Pneumatics();
 	//public static Compressor compressor;
@@ -52,7 +67,10 @@ public class Robot extends IterativeRobot {
 
 		oi = new OI();
 		CameraServer.getInstance().startAutomaticCapture();
-		
+		m_encoder = new Encoder(kEncoderPortA, kEncoderPortB);
+
+		m_encoder.setDistancePerPulse((Math.PI * 2) / 360.0);
+
 		
 		// instantiate the command used for the autonomous period
 //		m_autoChooser = new SendableChooser<Command>();
@@ -100,9 +118,15 @@ public class Robot extends IterativeRobot {
 		if (m_autonomousCommand != null) {
 			m_autonomousCommand.cancel();
 		}
+		//new PistonDown().start();
+		//Robot.m_ramp.Down();
+		System.out.println(GripperSub.m_gripper.getSelectedSensorPosition());
 
 	}
-
+	@Override
+	public void robotPeriodic() {
+		SmartDashboard.putNumber("Encoder", m_encoder.getDistance());
+	}
 	/**
 	 * This function is called periodically during teleoperated mode.
 	 */

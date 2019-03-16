@@ -8,6 +8,7 @@
 package org.usfirst.frc.team1517.robot;
 
 import edu.wpi.first.wpilibj.XboxController;
+import org.usfirst.frc.team1517.robot.commands.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -22,16 +23,10 @@ public class OI {
     	xbox = new XboxController(RobotMap.xboxController);
 		xbox2 = new XboxController(RobotMap.xboxController2);
 		xbox3 = new XboxController(RobotMap.xboxController3);
-		/*PneumaticLock.whenPressed(new PneumaticLock(0));
-		PneumaticLock.whenReleased(new PneumaticStop(0));
-		PneumaticUnlock.whenPressed(new PneumaticUnlock(0));
-		PneumaticUnlock.whenReleased(new PneumaticStop(0));
-		PneumaticLiftDown.whenPressed(new PneumaticLiftDown(0));
-		PneumaticLiftDown.whenReleased(new PneumaticLiftStop(0));
-		PneumaticLiftUp.whenPressed(new PneumaticLiftUp(0));
-		PneumaticLiftUp.whenReleased(new PneumaticLiftStop(0));*/
 		System.out.println("OI constructer " ); 
-    	
+		//xbox2.whenPressed(new PistonUp());
+		//xbox2.whenPressed(new PistonDown());
+
     }
     public XboxController getXbox() {
         return xbox;
